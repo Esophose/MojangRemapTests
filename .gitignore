@@ -1,0 +1,5 @@
+**/build/
+**/libs/
+**/.idea/
+**/.gradle/
+**/target/

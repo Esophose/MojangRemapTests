@@ -1,0 +1,4 @@
+name: TestPlugin
+main: dev.esophose.testplugin.TestPlugin
+version: '1.0.0-SNAPSHOT'
+api-version: '1.17'

@@ -1,0 +1,26 @@
+plugins {
+    id 'java-library'
+    id 'xyz.jpenilla.special-gradle' version '1.0.0-SNAPSHOT'
+}
+
+group = 'dev.esophose'
+version = '1.0.0-SNAPSHOT'
+sourceCompatibility = 16
+targetCompatibility = 16
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+dependencies {
+    compileOnly 'org.spigotmc:spigot:1.17-R0.1-SNAPSHOT:remapped-mojang'
+    mojangToObfMappings 'org.spigotmc:minecraft-server:1.17-R0.1-SNAPSHOT:maps-mojang@txt'
+    obfToRuntimeMappings 'org.spigotmc:minecraft-server:1.17-R0.1-SNAPSHOT:maps-spigot@csrg'
+}
+
+specialGradle {
+    specialSourceVersion.set('1.10.0')
+}
+
+build.dependsOn productionMappedJar
